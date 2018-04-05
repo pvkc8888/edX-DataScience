@@ -1,0 +1,47 @@
+# I am gonna write my notes taken during the edX course:  Foundations of Data Science.
+What is Data Science:
+    Drawing useful conclusions from data using computation.
+    ☐ Exploration
+        Identifying patterns in information.
+        Uses Visualizations.
+    ☐ Inference
+        Quantifying whether those patterns are reliable.
+        Uses randomization.
+    ☐ Prediction
+        Making informed guesses
+        Uses Machine Learning.
+@created(03-04-18 11:11)
+For use to make reasonable conclusions from our analysis, we have to make the following observations in our study
+Let us the make the case of "Eating chocolate is good for health!" . The observations in this study are as follows -
+Observations:
+    ☐ individuals, study subjects, participants, units
+        European adults
+    ☐ treatment
+        eating chocolates
+    ☐ outcome
+        heart disease
+The next question we have to ask ourselves is, Is there any relation between chocolate consumption and heart disease.
+We can also ask if eating chocolate was the only cause of the effect etc.,
+
+Even though we have an association, we have to establish causality.
+
+Comparison:
+    It is an efficient method to establish association and causality.
+    - Treatment group
+    - control group
+        doesn't receive the treatment
+Key to establishing Causality :
+    If the treatment and control groups are similar apart from the treatment, then differences between the outcomes in the two groups can be ascribed to the treatment
+Trouble:
+    - If the treatment and control groups have systematic differences other than the treatment, then it might be difficult to establish causality
+    - Such differences are often present in observational studies.
+    - When the lead researchers astray, they are called confounding factors.
+One answer to this trouble is by randomizing the data, if you assign individuals to treatment and control groups randomly, then the two groups are likely to be similar apart from the treatment.
+If you are able to randomize individuals into the treatment and control groups, you are running a randomized controlled experiment, also known as a randomized controlled trial (RCT).
+
+Table Operations @created(04-04-18 10:21):
+    - table.select('label here')
+    - table.drop('label of column you don't want here')
+    - table.show(number of rows you wanna see)
+    - table.sort('label of the column you want to sort by', descending = True, distinct = True) for unique values in column.
+    - table.barh('label1', 'label2')
