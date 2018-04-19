@@ -45,3 +45,44 @@ Table Operations @created(04-04-18 10:21):
     - table.show(number of rows you wanna see)
     - table.sort('label of the column you want to sort by', descending = True, distinct = True) for unique values in column.
     - table.barh('label1', 'label2')
+Week 2 @created(18-04-18 22:57) :
+    - Arithmetic:
+        About different types of number variables that python has, int and float and capacity of decimal places in float is around 15 decimal places.
+
+    - Exponential Growth:
+        The growth rate is the rate of increase per unit time.
+        After t time units, a quantity growing at a rate g will be x * (1+g) ** t
+        If after and before are measurements of the same quantity taken t time units apart, then the growth rate is (after/before) ** (1/t) - 1
+
+    - array:
+        make_array(1, 2, 3)
+        woah this is something cool I didn't know.
+        array.item(0) returns the first element in the array
+        Also, guess what all the elements in an array should be of the same type, python will automatically convert different types to the same type
+
+    - Columns:
+        A column of a table is an array
+        Access a column of a table t using its label or index movies.column('year') or movies.column(4)
+        A column expression evaluates to an array
+        Arithmetic doesn't change the array or table
+        Add new column using movies.with_column('label here', array here)
+        table.set_format('label here', PercentFormatter)
+
+    - Tables:
+        Table.read_table(filename)
+        Table() #creates an empty table
+        Table().with_columns(label 1, data 1, ...)
+        we can find the size of the table using num_rows and num_columns
+        use select and drop methods to select only particular columns in a table.
+        use table.relabeled(old, new) to rename a column label.
+        use table.take(number here) to select rows in a table
+        use table.where('column here', condition here) to return a table which passes the given condition. different types of conditions can be found here (http://data8.org/datascience/predicates.html)
+
+
+    - Strings:
+        use int() and float() and str() to convert strings to numbers and vice versa
+        '1' * 2 = '11'
+        2 * '1' = '11'
+    - Lists:
+        If you create a table column to a list, it will be converted to an array automatically.
+
