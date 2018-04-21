@@ -1,50 +1,51 @@
 # I am gonna write my notes taken during the edX course:  Foundations of Data Science.
-What is Data Science:
-    Drawing useful conclusions from data using computation.
-    ☐ Exploration
-        Identifying patterns in information.
-        Uses Visualizations.
-    ☐ Inference
-        Quantifying whether those patterns are reliable.
-        Uses randomization.
-    ☐ Prediction
-        Making informed guesses
-        Uses Machine Learning.
-@created(03-04-18 11:11)
-For use to make reasonable conclusions from our analysis, we have to make the following observations in our study
-Let us the make the case of "Eating chocolate is good for health!" . The observations in this study are as follows -
-Observations:
-    ☐ individuals, study subjects, participants, units
-        European adults
-    ☐ treatment
-        eating chocolates
-    ☐ outcome
-        heart disease
-The next question we have to ask ourselves is, Is there any relation between chocolate consumption and heart disease.
-We can also ask if eating chocolate was the only cause of the effect etc.,
+Week 1 @created(5-04-18 16:44):
+    What is Data Science:
+        Drawing useful conclusions from data using computation.
+        ☐ Exploration
+            Identifying patterns in information.
+            Uses Visualizations.
+        ☐ Inference
+            Quantifying whether those patterns are reliable.
+            Uses randomization.
+        ☐ Prediction
+            Making informed guesses
+            Uses Machine Learning.
+    @created(03-04-18 11:11)
+    For use to make reasonable conclusions from our analysis, we have to make the following observations in our study
+    Let us the make the case of "Eating chocolate is good for health!" . The observations in this study are as follows -
+    Observations:
+        ☐ individuals, study subjects, participants, units
+            European adults
+        ☐ treatment
+            eating chocolates
+        ☐ outcome
+            heart disease
+    The next question we have to ask ourselves is, Is there any relation between chocolate consumption and heart disease.
+    We can also ask if eating chocolate was the only cause of the effect etc.,
 
-Even though we have an association, we have to establish causality.
+    Even though we have an association, we have to establish causality.
 
-Comparison:
-    It is an efficient method to establish association and causality.
-    - Treatment group
-    - control group
-        doesn't receive the treatment
-Key to establishing Causality :
-    If the treatment and control groups are similar apart from the treatment, then differences between the outcomes in the two groups can be ascribed to the treatment
-Trouble:
-    - If the treatment and control groups have systematic differences other than the treatment, then it might be difficult to establish causality
-    - Such differences are often present in observational studies.
-    - When the lead researchers astray, they are called confounding factors.
-One answer to this trouble is by randomizing the data, if you assign individuals to treatment and control groups randomly, then the two groups are likely to be similar apart from the treatment.
-If you are able to randomize individuals into the treatment and control groups, you are running a randomized controlled experiment, also known as a randomized controlled trial (RCT).
+    Comparison:
+        It is an efficient method to establish association and causality.
+        - Treatment group
+        - control group
+            doesn't receive the treatment
+    Key to establishing Causality :
+        If the treatment and control groups are similar apart from the treatment, then differences between the outcomes in the two groups can be ascribed to the treatment
+    Trouble:
+        - If the treatment and control groups have systematic differences other than the treatment, then it might be difficult to establish causality
+        - Such differences are often present in observational studies.
+        - When the lead researchers astray, they are called confounding factors.
+    One answer to this trouble is by randomizing the data, if you assign individuals to treatment and control groups randomly, then the two groups are likely to be similar apart from the treatment.
+    If you are able to randomize individuals into the treatment and control groups, you are running a randomized controlled experiment, also known as a randomized controlled trial (RCT).
 
-Table Operations @created(04-04-18 10:21):
-    - table.select('label here')
-    - table.drop('label of column you don't want here')
-    - table.show(number of rows you wanna see)
-    - table.sort('label of the column you want to sort by', descending = True, distinct = True) for unique values in column.
-    - table.barh('label1', 'label2')
+    Table Operations @created(04-04-18 10:21):
+        - table.select('label here')
+        - table.drop('label of column you don't want here')
+        - table.show(number of rows you wanna see)
+        - table.sort('label of the column you want to sort by', descending = True, distinct = True) for unique values in column.
+        - table.barh('label1', 'label2')
 Week 2 @created(18-04-18 22:57) :
     - Arithmetic:
         About different types of number variables that python has, int and float and capacity of decimal places in float is around 15 decimal places.
@@ -77,6 +78,8 @@ Week 2 @created(18-04-18 22:57) :
         use table.relabeled(old, new) to rename a column label.
         use table.take(number here) to select rows in a table
         use table.where('column here', condition here) to return a table which passes the given condition. different types of conditions can be found here (http://data8.org/datascience/predicates.html)
+        use table.group('column') to get the count of how many times a variable is repeated in a column.
+
 
 
     - Strings:
@@ -85,4 +88,25 @@ Week 2 @created(18-04-18 22:57) :
         2 * '1' = '11'
     - Lists:
         If you create a table column to a list, it will be converted to an array automatically.
+Week 3 @created(19-04-18 20:43) :
+    - Census:
+        we can get US population data from https://www2.census.gov/programs-surveys/popest/technical-documentation/file-layouts/2010-2015/nc-est2015-agesex-res.pdf
+
+        To interpret numbers and percentages easily, use table.set_format('column name', NumberFormatter)
+        table.set_format('column name', PercentFormatter)
+
+        Plot the data using table.plot(column label)
+
+    - Charts:
+        Line plot-
+            table.plot(x column, y column)
+            if only one parameter is given, the plot is drawn between all the other values in the table.
+            If we need separate plots, we can set the overlay parameter to False and we get separate plots.
+        Scatter plot-
+             table.scatter(x column, y column)
+
+        Categorical and Numerical variables are the two main data types.
+        Bar chart-
+            table.barh(y column, x column)
+
 
