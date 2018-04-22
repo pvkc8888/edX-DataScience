@@ -108,5 +108,35 @@ Week 3 @created(19-04-18 20:43) :
         Categorical and Numerical variables are the two main data types.
         Bar chart-
             table.barh(y column, x column)
+   - Histograms:
+       The group method counts the number of rows for each value in the column.
+       Bar charts can display the distribution of a categorical variable.
+           One bar for each category
+           Length of a bar is the count of the frequency of the variable.
+       Area should be proportional to the values they represent. this is area principle @low
+       - Binning:
+           Binning is counting the number of numerical values that lie within ranges, called bins.
+           Bins are defined by their lower bounds.
+           The upper bound is the lower bound of the next bound.
+           The upper bound is only included when it is the last upper bound of the last bin @high
+           Usage -
+           table.bin('columns', bins = array bin)
+      Histograms is a chart that displays the distribution of a numerical variable using bins, there is one bar corresponding to each bin.
+      usage -
+          table.hist('column', bins = 'bins array', unit = 'unit here', normed = False)
+      Difference between bar chart and Histogram @created(21-04-18 20:21) @high:
+          - Bar chart:
+              Distribution of categorical variable
+              Bars have arbitrary (but equal) widths and spacing
+              height (or length) of bars proportional to the percent of individuals
+          - Histograms:
+              Distribution of numerical variable.
+              Horizontal axis is numerical, hence to scale with no gaps.
+              Area of the bars is proportional to the percent of individuals; height measures density.
+
+
+
+
+
 
 
